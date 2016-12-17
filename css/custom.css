@@ -1,0 +1,19 @@
+.item-details {
+    display: block
+}
+
+.quantity {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.save {
+    margin: -6px 0px 0px 20px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.active-page {
+    background-color: #444;
+    padding: 10px;
+}

@@ -1,0 +1,21 @@
+<h5>All items</h5>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 main">
+            <div class="row placeholders">
+                <div class="col-xs-6 col-sm-3 placeholder" data-ng-repeat="item in inventory">
+                    <form class="form-inline">
+                        <img src="{{item.imgURL}}" width="200" height="200" class="img-fluid" alt="Generic placeholder thumbnail">
+                        <h4>{{item.name}}</h4>
+                        <span class="text-muted item-details">Rs. {{item.price}}</span>
+                        <span class="text-muted item-details">Available: {{item.quantity}}</span>
+                        <input type="number" ng-model="item.selectedQuantity" class="quantity"><a href="#" class="btn btn-primary btn-xs" ng-click="addToCart(item)">Add</a>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
