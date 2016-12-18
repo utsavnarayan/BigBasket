@@ -42,10 +42,10 @@
                     <div class="row placeholders">
                         <div class="col-xs-6 col-sm-3 placeholder" data-ng-repeat="item in inventory">
                             <form class="form-inline">
-                                <img src="{{item.imgURL}}" width="200" height="200" class="img-fluid" alt="Generic placeholder thumbnail">
-                                <h4>{{item.name}}</h4>
-                                <span class="text-muted item-details">Rs. {{item.price}}</span>
-                                <span class="text-muted item-details">Available: {{item.quantity}}</span>
+                                <img src="{{item.details.image_url}}" width="200" height="200" class="img-fluid" alt="Generic placeholder thumbnail">
+                                <h4>{{item.details.name}}</h4>
+                                <span class="text-muted item-details">Rs. {{item.details.price}}</span>
+                                <span class="text-muted item-details">Available: {{item.details.quantity}}</span>
                                 <input type="number" ng-model="item.selectedQuantity" class="quantity"><a href="#" class="btn btn-primary btn-xs" ng-click="addToCart(item)">Add</a>
                             </form>
                         </div>

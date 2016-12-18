@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="Utsav">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Big basket</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body data-ng-app="dashboardHome">
+    <div data-ng-controller="HomeCtrl">
+        <nav class="navbar navbar-dark navbar-fixed-top bg-inverse">
+            <button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation"></button>
+            <a class="navbar-brand" href="#">Big basket</a>
+            <div id="navbar">
+                <nav class="nav navbar-nav float-xs-left">
+                    <a class="nav-item nav-link" href="cart.html">Cart</a>
+                    <a class="nav-item nav-link" href="orders.html">Orders</a>
+                </nav>
+                <form class="float-xs-right">
+                    <button type="submit" class="btn btn-default">Logout</button>
+                </form>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 main">
+                    <div class="row placeholders">
+                        <div class="col-xs-6 col-sm-3 placeholder" data-ng-repeat="item in inventory">
+                            <form class="form-inline">
+                                <img src="{{item.details.image_url}}" width="200" height="200" class="img-fluid" alt="Generic placeholder thumbnail">
+                                <h4>{{item.details.name}}</h4>
+                                <span class="text-muted item-details">Rs. {{item.details.price}}</span>
+                                <span class="text-muted item-details">Available: {{item.details.quantity}}</span>
+                                <input type="number" ng-model="item.selectedQuantity" class="quantity"><a href="#" class="btn btn-primary btn-xs" ng-click="addToCart(item)">Add</a>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
